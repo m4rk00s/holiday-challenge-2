@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact List</title>
-  </head>
 
-  <body>
-    <h1>Contact List</h1>
-    <ul id="contacts"></ul>
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Contact List</title>
+</head>
+
+<body>
+  <h1>Contact List</h1>
+  <table id="contacts">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone</th>
+      <th>Action</th>
+    </tr>
+  </table>
+
+  <div id="add-new-contact">
+    <h2>Add New Contact</h2>
+    <form action="index.html" method="post">
+      <label for="first_name">First Name: </label>
+      <input type="text" name="first_name" id="first_name">
+      <br>
+      <label for="last_name">Last Name: </label>
+      <input type="text" name="last_name" id="last_name">
+      <br>
+      <label for="phone">Phone: </label>
+      <input type="tel" name="phone" id="phone">
+      <br>
+      <input type="submit" value="SUBMIT">
+    </form>
+  </div>
+
+  <div id="edit-contact" style="display: none;">
+    <h2>Edit Contact</h2>
+    <form action="index.html" method="post">
+      <label for="first_name">First Name: </label>
+      <input type="text" name="first_name" id="first_name">
+      <br>
+      <label for="last_name">Last Name: </label>
+      <input type="text" name="last_name" id="last_name">
+      <br>
+      <label for="phone">Phone: </label>
+      <input type="tel" name="phone" id="phone">
+      <br>
+      <input type="submit" value="SUBMIT">
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
